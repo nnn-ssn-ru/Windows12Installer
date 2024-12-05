@@ -434,6 +434,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(767, 406);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
@@ -474,7 +475,7 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Windows 12 Installer";
             this.ResumeLayout(false);
             this.PerformLayout();
 

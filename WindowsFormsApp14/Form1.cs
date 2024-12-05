@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using WindowsFormsApp14;
 
 namespace WindowsDownload
 {
@@ -91,6 +92,8 @@ namespace WindowsDownload
             timer2.Enabled = true;
             timer2.Interval = 100;
 
+            button1.Visible = false;
+
 
 
 
@@ -102,11 +105,16 @@ namespace WindowsDownload
 
         public void DownloadStop()
         {
-            
-            
-            MessageBox.Show("Успешная загрузка");
-            this.Close();
 
+            timer2.Enabled = false;
+            MessageBox.Show("Успешная загрузка");
+            MessageBox.Show("А теперь давай настроим пользователя");
+
+            Form3 form3 = new Form3();
+            form3.Show();
+
+            
+            
 
 
 
@@ -296,11 +304,12 @@ namespace WindowsDownload
                 label3.Text = progressBar2.Value.ToString() + "%";
             }
 
-            else { this.Close(); timer2 = null; }
+            else 
+            { 
+                DownloadStop();
 
-
-            
-
+                
+            }
         }
     }
 }
